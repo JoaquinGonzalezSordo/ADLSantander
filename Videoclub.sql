@@ -27,6 +27,19 @@ CREATE TABLE Peliculas(
 
 
 
+INSERT INTO Peliculas
+   VALUES ('VL','Lo que el viento de llevó','Drama','1939',
+           'Victor Fleming','Clark Gable','Vivien Leigh','8','Metro Goldwin Mayer');
+INSERT INTO Peliculas
+   VALUES ('CB','Casablanca','Drama','1942',
+           'Michel Curtiz','Humphrey Bogart','Ingrid Bergman','3','Warner');
+INSERT INTO Peliculas
+   VALUES ('VZ','Viva Zapata','Drama','1952',
+           'Elia Kazan','Marlon Brando','Jean Peters','1','20 th centiuries');
+INSERT INTO Peliculas
+   VALUES ('BN','Blancanieves','Infantil','1937',
+           'Walt Disney','El principe','Blancanieves','1','Disney');
 
+select * from Peliculas
 
 
