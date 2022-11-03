@@ -167,9 +167,17 @@ CREATE TABLE Clientes(
 	  nombre varchar(20) not null,
 	  apellidos varchar(40) not null,
 	  direccion varchar(100),
+	  ciudad varchar(30),
 	  telefono varchar(15),
 	  fecha_inscripcion date,
 	
      PRIMARY KEY (Codcli)
 );
 
+
+
+-- INSERT INTO Clientes
+-- VALUES ('c01','Juan','Perez','Calle Rosa 3','456546543','2007-11-18')
+
+
+   select *
