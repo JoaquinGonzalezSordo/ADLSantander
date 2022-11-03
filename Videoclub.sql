@@ -159,3 +159,17 @@ INSERT INTO Peliculas
 		   			 		  		  		 	   			   
 
 select * from Peliculas order by 5
+
+
+drop table if exists Clientes;
+CREATE TABLE Clientes(
+      Codcli char(3),
+	  nombre varchar(20) not null,
+	  apellidos varchar(40) not null,
+	  direccion varchar(100),
+	  telefono varchar(15),
+	  fecha_inscripcion date,
+	
+     PRIMARY KEY (Codcli)
+);
+
