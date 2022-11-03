@@ -209,3 +209,30 @@ INSERT INTO Clientes
 		   			 		  		  		 	   		
 
    select * from Clientes
+
+
+   drop table if exists Distribuidoras;
+CREATE TABLE Distribuidoras(
+           coddis char(3),
+		   nombre varchar(30),
+		   Direccon varchar(50),
+		   telefono varchar(15),
+		   persona_contacto varchar(80),
+		   fecha_contrato date,
+		PRIMARY KEY (CODDIS)
+		);
+
+
+
+
+
+
+   drop table if exists Inventario;
+CREATE TABLE Inventario(
+      Codpel char(2),
+	  numpel int(2),
+
+
+
+	
+     FOREIGN KEY (Codpel)
