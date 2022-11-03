@@ -11,4 +11,16 @@ USE Videoclub_Sardinero;
 go
 
 
-
+drop table if exists Peliculas;
+CREATE TABLE Peliculas(
+      Codpel char,
+	  titulo varchar(70) not null unique,
+	  genero varchar(20) not null,
+	  anio smallint,
+	  director varchar(40) not null,
+	  actorprincipal varchar(40),
+	  actrizprincipal varchar(40),
+	  numoscars tinyint,
+	  productora varchar(40),
+     PRIMARY KEY (Codpel)
+);
