@@ -221,6 +221,29 @@ CREATE TABLE Distribuidoras(
 		   fecha_contrato date,
 		PRIMARY KEY (CODDIS)
 		);
+INSERT INTO Distribuidoras
+  VALUES ('d01','Warner','Calle Menchaza 7 Madrid','111111111','Raul','2010-03-01');
+INSERT INTO Distribuidoras
+  VALUES ('d02','Universal','Calle Albiol 7 Barcelona','222222222','Carlos','2014-03-01');
+
+INSERT INTO Distribuidoras
+  VALUES ('d03','Paramount','Calle Victoria 7 Madrid','333333333','Ana','2017-03-01');
+INSERT INTO Distribuidoras
+  VALUES ('d04','20 th centuries','Calle San Luis 7 Barcelona','444444444','Miguel','2015-03-01');
+INSERT INTO Distribuidoras
+  VALUES ('d05','Disney','Calle Mayor 7 Bilbao','555555555','Gorka','2018-03-01');
+INSERT INTO Distribuidoras
+  VALUES ('d06','Columbia','Calle Arroyo 7 Madrid','666666666','Javier','2014-08-01');
+INSERT INTO Distribuidoras
+  VALUES ('d07','Metro Goldwin Mayer','Calle Santa Teresa 7 Madrid','777777777','Jimena','2019-08-01');
+INSERT INTO Distribuidoras
+  VALUES ('d08','United artists','Paseo de la Castellana 11 Madrid','888888888','Victor','2020-08-01');
+
+
+
+
+
+select * from Distribuidoras
 
 
 
