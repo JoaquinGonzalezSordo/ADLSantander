@@ -142,7 +142,20 @@ update Peliculas
   set genero = 'Historica'
     where genero ='historica';
 
+INSERT INTO Peliculas
+   VALUES ('TS','Tesis','Terror','España','1996',
+           'Alejandro Amenabar','Eduardo Noriega','Ana Torrent','0','Universal');
 
+INSERT INTO Peliculas
+   VALUES ('IM','La isla minima','Policiaca','España','2014',
+           'Alberto Rodriguez','Javier Gutierrez','Maria Varod','0','Warner');
+
+INSERT INTO Peliculas
+   VALUES ('T1','Torrente','Comedia','España','1998',
+           'Santiago Segura','Santiago Segura','Neus Asensi','0','ADS Service');
+INSERT INTO Peliculas
+   VALUES ('AM','Amelie','Comedia','Francia','1998',
+           'Jean Pierre Jeunet','Audrey Tatou','Mathieu Kassovitz','1','Union Generale');
 		   			 		  		  		 	   			   
 
 select * from Peliculas order by 5
