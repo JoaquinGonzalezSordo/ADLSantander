@@ -176,8 +176,36 @@ CREATE TABLE Clientes(
 
 
 
--- INSERT INTO Clientes
--- VALUES ('c01','Juan','Perez','Calle Rosa 3','456546543','2007-11-18')
+INSERT INTO Clientes
+   VALUES ('c01','Juan','Perez','Calle Rosa 3','Santander','456546543','2007-11-18');
 
+INSERT INTO Clientes
+   VALUES ('c02','Luisa','Ruiz','Calle Barco 3','Bezana','656546543','2009-10-18');
+INSERT INTO Clientes
+   VALUES ('c03','Carlos','Suarezs','Calle Golondrina 3','Astillero',
+           '656547843','2013-10-18');
 
-   select *
+INSERT INTO Clientes
+   VALUES ('c04','Miguel','Hernandez','Calle Tomás 3','Santander',
+           '656547213','2015-10-18');
+INSERT INTO Clientes
+   VALUES ('c05','Federico','Lopez','Calle Montes 3','Santander',
+           '656547363','2015-08-18');
+INSERT INTO Clientes
+   VALUES ('c06','Laura','Rodriguez','Avenida Cantabria 7','Santander',
+           '656547993','2011-08-18');
+INSERT INTO Clientes
+   VALUES ('c07','Pedro','Rodriguez','Avenida Constitucion 7','Bezana',
+           '656541193','2011-03-18');
+INSERT INTO Clientes
+   VALUES ('c08','María','Arganda','Avenida Pereda 7','Santander',
+           '656521193','2011-03-12');
+	INSERT INTO Clientes
+   VALUES ('c09','Iker','Jimenez','Calle Sotileza 1','Bezana',
+           '656541223','2011-03-18');
+INSERT INTO Clientes
+   VALUES ('c10','Irene','Gonzalez','Avenida Montés 7','Santander',
+           '656520093','2017-03-19');
+		   			 		  		  		 	   		
+
+   select * from Clientes
