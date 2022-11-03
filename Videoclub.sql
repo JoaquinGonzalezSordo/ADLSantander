@@ -13,7 +13,7 @@ go
 
 drop table if exists Peliculas;
 CREATE TABLE Peliculas(
-      Codpel char,
+      Codpel char(2),
 	  titulo varchar(70) not null unique,
 	  genero varchar(20) not null,
 	  anio smallint,
@@ -24,3 +24,9 @@ CREATE TABLE Peliculas(
 	  productora varchar(40),
      PRIMARY KEY (Codpel)
 );
+
+
+
+
+
+
