@@ -253,7 +253,6 @@ CREATE TABLE Inventario(
 	  numpel int,
 	  fecha_entrada date,
 	  disponibilidad bit not null,
-	  Codcli char(3),
 	  Fecha_salida date,
 	  Fecha_vuelta date,
 	  precio float,
@@ -262,9 +261,6 @@ CREATE TABLE Inventario(
 	 CONSTRAINT FK_Codpel FOREIGN KEY (Codpel)
         REFERENCES Peliculas (Codpel)
 		on update cascade,
-	 CONSTRAINT FK_Codcli FOREIGN KEY (Codcli)
-        REFERENCES Clientes (Codcli)
-         ON UPDATE CASCADE
 	 );
 
 drop table if exists Alquiler;
