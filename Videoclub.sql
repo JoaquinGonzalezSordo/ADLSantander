@@ -240,10 +240,7 @@ INSERT INTO Distribuidoras
   VALUES ('d08','United artists','Paseo de la Castellana 11 Madrid','888888888','Victor','2020-08-01');
 
 
-
-
-
-select * from Distribuidoras
+ select * from Distribuidoras
 
 
 
@@ -253,9 +250,57 @@ select * from Distribuidoras
    drop table if exists Inventario;
 CREATE TABLE Inventario(
       Codpel char(2),
-	  numpel int(2),
+	  numpel int,
+	  fecha_entrada date,
+	  disponibilidad bit not null,
+	  Codcli char(3),
+	  Fecha_salida date,
+	  Fecha_vuelta date,
+	  precio float,
+	  calificacion float,
+     PRIMARY KEY (Codpel,numpel),
+	 CONSTRAINT FK_Codpel FOREIGN KEY (Codpel)
+        REFERENCES Peliculas (Codpel)
+		on update cascade,
+	 CONSTRAINT FK_Codcli FOREIGN KEY (Codcli)
+        REFERENCES Clientes (Codcli)
+         ON UPDATE CASCADE
+	 );
+
+drop table if exists Alquiler;
+CREATE TABLE Alquiler(
+      Codalq char(3),
+      Codcli char(3),
+	  Codpel char(2),
+	  numpel int,
+	  fecha_alquiler date,
+	  fechaprev_devolucion date,
+	  fechareal_devolucion date,
+	  sancion bit,
+     PRIMARY KEY (Codalq),
+	 CONSTRAINT FK_Codalqcli FOREIGN KEY (Codcli)
+        REFERENCES Clientes (Codcli)
+		on update cascade,
+	  CONSTRAINT FK_Codalqpel FOREIGN KEY (Codpel,numpel)
+        REFERENCES Inventario (Codpel,numpel)
+
+	 );
 
 
+	 drop table if exists Pedidos;
+CREATE TABLE Pedidos(
+      Codped char(3),
+      coddis char(3),
+	  Codpel char(2),
+	  numeropel int,
+	  fecha_llegada date,
+	  formapago char(30),
+     PRIMARY KEY (Codped),
+	 CONSTRAINT FK_Coddis FOREIGN KEY (Coddis)
+        REFERENCES Distribuidoras (Coddis)
+		on update cascade,
+	  CONSTRAINT FK_Codpeli FOREIGN KEY (Codpel)
+        REFERENCES Peliculas (Codpel)
 
-	
-     FOREIGN KEY (Codpel)
+	 );
+
