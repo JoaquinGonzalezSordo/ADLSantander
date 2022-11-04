@@ -411,8 +411,7 @@ Execute Procdisponibilidadgenero
 
 -- Cambio telefono de un cliente
 
--- update Clientes
- -- set telefono ='657
-
--- Procedimiento para saber si alguien es cliente con su num telefono
+update Clientes
+ set telefono ='657521193'
+ where Codcli = 'c08'
 
