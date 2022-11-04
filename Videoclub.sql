@@ -472,12 +472,13 @@ CREATE PROC Procinsertaralq
 @fecha_alquiler as date,
 @fechaprev_devolucion as date,
 @fechareal_devolucion as date,
-@sancion as bit,
-@Codcli as char(3) = c00
+@sancion as bit
+
 
 
 as
 begin
+Declare @Codcli char(3)
 set @Codcli = (select Codcli from Clientes where telefono=@telefono)
 
 if @Codcli is null
@@ -500,9 +501,9 @@ END
 
 
 Execute Procinsertaralq
-@Codalq ='A06',
-@telefono ='156547843',
-@Codpel ='I1',
+@Codalq ='A08',
+@telefono ='654321987',
+@Codpel ='SM',
 @numpel = '1',
 @fecha_alquiler = '2022-11-05',
 @fechaprev_devolucion = '2022-11-07',
