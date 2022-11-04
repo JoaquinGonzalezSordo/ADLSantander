@@ -474,12 +474,15 @@ CREATE PROC Procinsertaralq
 @fechareal_devolucion as date,
 @sancion as bit,
 @Codcli as char(3) = c00
---  (select Codcli from Clientes where telefono=@telefono),
+
 
 as
 begin
 set @Codcli = (select Codcli from Clientes where telefono=@telefono)
--- Declare @Codcli char(3) = select Codcli from Clientes where telefono=@telefono
+
+if @Codcli is null
+      select 'No existe dicho cliente, introducir sus datos'
+else
 insert into Alquiler
     values(@Codalq,
 	       @Codcli,
@@ -495,11 +498,10 @@ END
 
 -- select Codcli, telefono from Clientes
 
-declare @Codcli as char(3)
 
 Execute Procinsertaralq
-@Codalq ='A10',
-@telefono ='656547843',
+@Codalq ='A06',
+@telefono ='156547843',
 @Codpel ='I1',
 @numpel = '1',
 @fecha_alquiler = '2022-11-05',
@@ -508,6 +510,52 @@ Execute Procinsertaralq
 @sancion ='';
 
 -- select * from alquiler
--- delete from alquiler where Codalq is null
+-- delete from alquiler where Codcli is null or Codcli='c03'
+
+-- PROCEDIMIENTO PARA INSERTAR DATOS DE CLIENTES
+if OBJECT_id('Procinsertarcli','P') is not null
+     drop proc Procinsertarcli;
+go
+
+CREATE PROC Procinsertarcli
+	    
+@Codcli as char(3),
+@nombre as varchar(20),
+@apellidos as varchar(40),
+@dni as nvarchar(9),
+@direccion as varchar(100),
+@ciudad as varchar(30),
+@telefono as varchar(15),
+@fecha_inscripcion as date
 
 
+as
+begin
+
+insert into Clientes
+    values(@Codcli,
+	       @nombre,
+		   @apellidos,
+		   @dni,
+		   @direccion,
+		   @ciudad,
+		   @telefono,
+		   @fecha_inscripcion)
+
+RETURN;
+END
+
+-- select Codcli, telefono from Clientes
+
+
+Execute Procinsertarcli
+@Codcli ='c11',
+@nombre ='Alberto',
+@apellidos ='Rodriguez',
+@dni='54367845d',
+@direccion='calle San javier 3',
+@ciudad='Bezana',
+@telefono='654321987',
+@fecha_inscripcion='2022-07-09'
+
+-- select * from clientes
