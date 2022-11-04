@@ -316,6 +316,103 @@ INSERT INTO Inventario
 INSERT INTO Inventario
    VALUES ('AM','1','2014-05-02',
            '0','2022-11-03','2022-11-06','2','4');
+INSERT INTO Inventario
+   VALUES ('I1','1','2010-05-02',
+           '0','2022-11-03','2022-11-06','2','5');
+INSERT INTO Inventario
+   VALUES ('I2','1','2010-07-02',
+           '1','','','2','3');
+INSERT INTO Inventario
+   VALUES ('I3','1','2011-07-02',
+           '0','2022-11-04','2022-11-06','2','4');
+INSERT INTO Inventario
+   VALUES ('SM','1','2014-07-02',
+           '1','','','2','5');
+INSERT INTO Inventario
+   VALUES ('SM','2','2014-07-02',
+           '0','2022-11-04','2022-11-07','2','5');
 
--- SELECT * FROM PELICULAS
+-- SELECT * FROM PELICULAS order by 3
 -- SELECT * FROM Inventario
+
+
+
+-- Preparando procedimiento de  disponibilidad de titulo
+
+/*
+select I.Codpel,
+       P.titulo,
+       I.disponibilidad
+	from Inventario I
+	   right join
+	     Peliculas P
+	   on I.Codpel=P.Codpel
+*/
+if OBJECT_id('Procdisponibilidadtitulo','P') is not null
+     drop proc Procdisponibilidadtitulo
+go
+
+CREATE PROC Procdisponibilidadtitulo
+	    
+@titulo as varchar(70)
+
+as
+begin
+select I.Codpel,
+       P.titulo,
+       I.disponibilidad
+	from Inventario I
+	   right join
+	     Peliculas P
+	   on I.Codpel=P.Codpel
+	 where P.titulo=@titulo;
+RETURN;
+END
+
+Execute Procdisponibilidadtitulo
+@titulo ='Blancanieves'
+
+-- Preparando procedimiento de  disponibilidad de GENERO
+
+/*
+select I.Codpel,
+       P.titulo,
+	   P.genero,
+       I.disponibilidad
+	from Inventario I
+	   right join
+	     Peliculas P
+	   on I.Codpel=P.Codpel
+*/
+if OBJECT_id('Procdisponibilidadgenero','P') is not null
+     drop proc Procdisponibilidadgenero
+go
+
+CREATE PROC Procdisponibilidadgenero
+	    
+@genero as varchar(20)
+
+as
+begin
+select I.Codpel,
+       P.titulo,
+	   P.genero,
+       I.disponibilidad
+	from Inventario I
+	   right join
+	     Peliculas P
+	   on I.Codpel=P.Codpel
+	 where P.genero=@genero;
+RETURN;
+END
+
+Execute Procdisponibilidadgenero
+@genero ='Aventuras'
+
+-- Cambio telefono de un cliente
+
+-- update Clientes
+ -- set telefono ='657
+
+-- Procedimiento para saber si alguien es cliente con su num telefono
+
