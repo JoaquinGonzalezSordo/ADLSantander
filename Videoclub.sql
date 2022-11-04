@@ -285,6 +285,17 @@ CREATE TABLE Alquiler(
         REFERENCES Inventario (Codpel,numpel)
 
 	 );
+-- select * from inventario
+insert into Alquiler
+     VALUES ('A01','c01','BN','2','2022-11-02','2022-11-05','','');
+insert into Alquiler
+     VALUES ('A02','c03','I3','1','2022-11-04','2022-11-06','','');
+insert into Alquiler
+     VALUES ('A03','c06','SM','2','2022-11-04','2022-11-07','','');
+insert into Alquiler
+     VALUES ('A04','c02','AM','1','2022-11-03','2022-11-06','','');
+
+-- Select * from Alquiler
 
 
 	 drop table if exists Pedidos;
@@ -414,4 +425,89 @@ Execute Procdisponibilidadgenero
 update Clientes
  set telefono ='657521193'
  where Codcli = 'c08'
+
+-- Procedimiento para saber si alguien es cliente
+
+if OBJECT_id('Procsabersiescliente','P') is not null
+     drop proc Procsabersiescliente
+go
+
+CREATE PROC Procsabersiescliente
+	    
+@telefono as varchar(15)
+
+
+as
+begin
+if (select Codcli
+	 from Clientes
+	 where telefono=@telefono) 
+is not null 
+select(select Codcli
+	 from Clientes
+	 where telefono=@telefono)
+ELSE
+ SELECT 'NO ES CLIENTE'
+RETURN;
+END
+
+Execute Procsabersiescliente
+@telefono ='657521193'
+
+-- select 'Hola mundo'
+-- select codcli, telefono from Clientes
+
+-- Crear un procedimiento para insertar un nuevo alquiler
+
+if OBJECT_id('Procinsertaralq','P') is not null
+     drop proc Procinsertaralq;
+go
+
+CREATE PROC Procinsertaralq
+	    
+@Codalq as char(3),
+@telefono as varchar(15),
+@Codpel as char(2),
+@numpel as int,
+@fecha_alquiler as date,
+@fechaprev_devolucion as date,
+@fechareal_devolucion as date,
+@sancion as bit,
+@Codcli as char(3) = c00
+--  (select Codcli from Clientes where telefono=@telefono),
+
+as
+begin
+set @Codcli = (select Codcli from Clientes where telefono=@telefono)
+-- Declare @Codcli char(3) = select Codcli from Clientes where telefono=@telefono
+insert into Alquiler
+    values(@Codalq,
+	       @Codcli,
+		   @Codpel,
+		   @numpel,
+		   @fecha_alquiler,
+		   @fechaprev_devolucion,
+		   @fechareal_devolucion,
+		   @sancion)
+
+RETURN;
+END
+
+-- select Codcli, telefono from Clientes
+
+declare @Codcli as char(3)
+
+Execute Procinsertaralq
+@Codalq ='A10',
+@telefono ='656547843',
+@Codpel ='I1',
+@numpel = '1',
+@fecha_alquiler = '2022-11-05',
+@fechaprev_devolucion = '2022-11-07',
+@fechareal_devolucion = '',
+@sancion ='';
+
+-- select * from alquiler
+-- delete from alquiler where Codalq is null
+
 
