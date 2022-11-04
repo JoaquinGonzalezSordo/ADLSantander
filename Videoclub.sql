@@ -127,6 +127,9 @@ INSERT INTO Peliculas
 INSERT INTO Peliculas
    VALUES ('I4','La calavera de cristal','Aventuras','EEUU','2006',
            'Steven Spielberg','Harrison Ford','Cate Blanchett','0','Paramount');
+INSERT INTO Peliculas
+   VALUES ('H1','Harry Potter y la piedra filosofal','Infantil','Reino Unido','2001',
+           'Chris Columbus','Daniel Radcliffe','Emma Watson','0','Warner');
 
 
 update Peliculas
@@ -166,6 +169,7 @@ CREATE TABLE Clientes(
       Codcli char(3),
 	  nombre varchar(20) not null,
 	  apellidos varchar(40) not null,
+	  dni nVARCHAR(9),
 	  direccion varchar(100),
 	  ciudad varchar(30),
 	  telefono varchar(15),
@@ -177,34 +181,34 @@ CREATE TABLE Clientes(
 
 
 INSERT INTO Clientes
-   VALUES ('c01','Juan','Perez','Calle Rosa 3','Santander','456546543','2007-11-18');
+   VALUES ('c01','Juan','Perez','12345678a','Calle Rosa 3','Santander','456546543','2007-11-18');
 
 INSERT INTO Clientes
-   VALUES ('c02','Luisa','Ruiz','Calle Barco 3','Bezana','656546543','2009-10-18');
+   VALUES ('c02','Luisa','Ruiz','22222222b','Calle Barco 3','Bezana','656546543','2009-10-18');
 INSERT INTO Clientes
-   VALUES ('c03','Carlos','Suarezs','Calle Golondrina 3','Astillero',
+   VALUES ('c03','Carlos','Suarezs','33333333C','Calle Golondrina 3','Astillero',
            '656547843','2013-10-18');
 
 INSERT INTO Clientes
-   VALUES ('c04','Miguel','Hernandez','Calle Tomás 3','Santander',
+   VALUES ('c04','Miguel','Hernandez','44444444D','Calle Tomás 3','Santander',
            '656547213','2015-10-18');
 INSERT INTO Clientes
-   VALUES ('c05','Federico','Lopez','Calle Montes 3','Santander',
+   VALUES ('c05','Federico','Lopez','56789432e','Calle Montes 3','Santander',
            '656547363','2015-08-18');
 INSERT INTO Clientes
-   VALUES ('c06','Laura','Rodriguez','Avenida Cantabria 7','Santander',
+   VALUES ('c06','Laura','Rodriguez','44556754F','Avenida Cantabria 7','Santander',
            '656547993','2011-08-18');
 INSERT INTO Clientes
-   VALUES ('c07','Pedro','Rodriguez','Avenida Constitucion 7','Bezana',
+   VALUES ('c07','Pedro','Rodriguez','87654321H','Avenida Constitucion 7','Bezana',
            '656541193','2011-03-18');
 INSERT INTO Clientes
-   VALUES ('c08','María','Arganda','Avenida Pereda 7','Santander',
+   VALUES ('c08','María','Arganda','43216789H','Avenida Pereda 7','Santander',
            '656521193','2011-03-12');
 	INSERT INTO Clientes
-   VALUES ('c09','Iker','Jimenez','Calle Sotileza 1','Bezana',
+   VALUES ('c09','Iker','Jimenez','34567890K','Calle Sotileza 1','Bezana',
            '656541223','2011-03-18');
 INSERT INTO Clientes
-   VALUES ('c10','Irene','Gonzalez','Avenida Montés 7','Santander',
+   VALUES ('c10','Irene','Gonzalez','88888888l','Avenida Montés 7','Santander',
            '656520093','2017-03-19');
 		   			 		  		  		 	   		
 
@@ -300,3 +304,18 @@ CREATE TABLE Pedidos(
 
 	 );
 
+INSERT INTO Inventario
+   VALUES ('BN','1','2011-03-02',
+           '1',' ',' ','2','4');
+INSERT INTO Inventario
+   VALUES ('BN','2','2011-05-02',
+           '0','2022-11-02','2022-11-05','2','4');
+INSERT INTO Inventario
+   VALUES ('AH','1','2013-05-02',
+           '1','','','2','3');
+INSERT INTO Inventario
+   VALUES ('AM','1','2014-05-02',
+           '0','2022-11-03','2022-11-06','2','4');
+
+-- SELECT * FROM PELICULAS
+-- SELECT * FROM Inventario
