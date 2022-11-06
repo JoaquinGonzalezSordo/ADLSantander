@@ -561,4 +561,73 @@ Execute Procinsertarcli
 @telefono='654321987',
 @fecha_inscripcion='2022-07-09'
 
--- select * from clientes
+-- select * from Distribuidoras;
+
+select Codpel, titulo, productora from Peliculas where productora='United artists'
+Insert into Pedidos
+   Values ('P01','d01','CB',2,'2014-08-07','Cheque');
+ Insert into Pedidos
+   values ('P02','d01','H1',2,'2012-08-07','Transferencia')
+ Insert into Pedidos
+   values ('P03','d01','IM',1,'2022-08-07','Metálico');
+ Insert into Pedidos
+   values ('P04','d01','LG',3,'2019-08-07','Metálico');
+ Insert into Pedidos
+   values ('P05','d01','SM',2,'2010-08-07','Cheque');
+  Insert into Pedidos
+   values ('P06','d04','G1',1,'2017-08-07','Transferencia');
+   Insert into Pedidos
+   values ('P07','d04','G2',1,'2017-08-07','Transferencia');
+   Insert into Pedidos
+   values ('P08','d04','G3',1,'2017-08-07','Transferencia');
+    Insert into Pedidos
+   values ('P09','d04','G4',1,'2017-08-07','Transferencia');
+       Insert into Pedidos
+   values ('P10','d04','G5',1,'2017-08-07','Transferencia');
+          Insert into Pedidos
+   values ('P11','d04','G6',1,'2017-08-07','Transferencia');
+     Insert into Pedidos
+   values ('P12','d04','SL',1,'2015-08-07','Transferencia');
+   Insert into Pedidos
+   values ('P13','d04','VZ',1,'2018-08-07','Transferencia');
+   Insert into Pedidos
+   values ('P14','d02','EG',1,'2018-01-07','Cheque');
+   Insert into Pedidos
+   values ('P15','d02','ET',1,'2016-01-07','Cheque');
+  Insert into Pedidos
+   values ('P16','d02','GD',1,'2015-01-07','Cheque');
+    Insert into Pedidos
+   values ('P17','d02','TS',1,'2015-01-07','Cheque');
+  Insert into Pedidos
+   values ('P18','d03','FG',2,'2019-01-07','Metálico');
+  Insert into Pedidos
+   values ('P19','d03','I1',1,'2020-01-07','Metálico');
+    Insert into Pedidos
+   values ('P20','d03','I2',1,'2020-01-07','Metálico');
+    Insert into Pedidos
+   values ('P21','d03','I3',1,'2020-01-07','Metálico');
+      Insert into Pedidos
+   values ('P22','d03','I4',1,'2021-01-07','Metálico');
+       Insert into Pedidos
+   values ('P23','d03','P1',2,'2018-05-07','Metálico');
+   Insert into Pedidos
+   values ('P24','d03','P2',2,'2018-05-07','Metálico');
+    Insert into Pedidos
+   values ('P25','d03','TT',1,'2015-05-07','Metálico');
+       Insert into Pedidos
+   values ('P26','d05','BN',2,'2011-05-07','Cheque');
+          Insert into Pedidos
+   values ('P27','d06','GH',1,'2015-05-07','Cheque');
+   Insert into Pedidos
+   values ('P28','d06','LA',1,'2018-05-07','Cheque');
+   Insert into Pedidos
+   values ('P29','d07','BH',1,'2017-05-07','Transferencia');
+   Insert into Pedidos
+   values ('P30','d07','VL',1,'2017-05-07','Transferencia');
+      Insert into Pedidos
+   values ('P31','d08','AH',1,'2014-05-07','Transferencia');
+
+
+
+
+   select * from Pedidos
