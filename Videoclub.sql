@@ -267,6 +267,34 @@ CREATE TABLE Inventario(
 		on update cascade,
 	 );
 
+	 INSERT INTO Inventario
+   VALUES ('BN','1','2011-03-02',
+           '1',' ',' ','2','4');
+INSERT INTO Inventario
+   VALUES ('BN','2','2011-05-02',
+           '0','2022-11-02','2022-11-05','2','4');
+INSERT INTO Inventario
+   VALUES ('AH','1','2013-05-02',
+           '1','','','2','3');
+INSERT INTO Inventario
+   VALUES ('AM','1','2014-05-02',
+           '0','2022-11-03','2022-11-06','2','4');
+INSERT INTO Inventario
+   VALUES ('I1','1','2010-05-02',
+           '0','2022-11-03','2022-11-06','2','5');
+INSERT INTO Inventario
+   VALUES ('I2','1','2010-07-02',
+           '1','','','2','3');
+INSERT INTO Inventario
+   VALUES ('I3','1','2011-07-02',
+           '0','2022-11-04','2022-11-06','2','4');
+INSERT INTO Inventario
+   VALUES ('SM','1','2014-07-02',
+           '1','','','2','5');
+INSERT INTO Inventario
+   VALUES ('SM','2','2014-07-02',
+           '0','2022-11-04','2022-11-07','2','5');
+
 drop table if exists Alquiler;
 CREATE TABLE Alquiler(
       Codalq char(3),
@@ -315,33 +343,7 @@ CREATE TABLE Pedidos(
 
 	 );
 
-INSERT INTO Inventario
-   VALUES ('BN','1','2011-03-02',
-           '1',' ',' ','2','4');
-INSERT INTO Inventario
-   VALUES ('BN','2','2011-05-02',
-           '0','2022-11-02','2022-11-05','2','4');
-INSERT INTO Inventario
-   VALUES ('AH','1','2013-05-02',
-           '1','','','2','3');
-INSERT INTO Inventario
-   VALUES ('AM','1','2014-05-02',
-           '0','2022-11-03','2022-11-06','2','4');
-INSERT INTO Inventario
-   VALUES ('I1','1','2010-05-02',
-           '0','2022-11-03','2022-11-06','2','5');
-INSERT INTO Inventario
-   VALUES ('I2','1','2010-07-02',
-           '1','','','2','3');
-INSERT INTO Inventario
-   VALUES ('I3','1','2011-07-02',
-           '0','2022-11-04','2022-11-06','2','4');
-INSERT INTO Inventario
-   VALUES ('SM','1','2014-07-02',
-           '1','','','2','5');
-INSERT INTO Inventario
-   VALUES ('SM','2','2014-07-02',
-           '0','2022-11-04','2022-11-07','2','5');
+
 
 -- SELECT * FROM PELICULAS order by 3
 -- SELECT * FROM Inventario
