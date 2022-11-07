@@ -660,4 +660,100 @@ Insert into Pedidos
 
 
 
-   select * from Inventario
+ select * from Pedidos
+ select * from inventario
+ INSERT INTO Inventario
+   VALUES ('G1','1','2017-08-07',
+           '1','','','2','4');
+INSERT INTO Inventario
+   VALUES ('G2','1','2017-08-07',
+           '1','','','2','4');
+INSERT INTO Inventario
+   VALUES ('G3','1','2017-08-07',
+           '1','','','2','4');
+ INSERT INTO Inventario
+   VALUES ('G4','1','2017-08-07',
+           '1','','','2','4');
+INSERT INTO Inventario
+   VALUES ('G5','1','2017-08-07',
+           '1','','','2','4');
+INSERT INTO Inventario
+   VALUES ('G6','1','2017-08-07',
+           '1','','','2','4');
+INSERT INTO Inventario
+   VALUES ('SL','1','2015-08-07',
+           '1','','','2','2');
+INSERT INTO Inventario
+   VALUES ('VZ','1','2018-08-07',
+           '1','','','2','1');
+INSERT INTO Inventario
+   VALUES ('EG','1','2018-01-07',
+           '1','','','2','4');
+INSERT INTO Inventario
+   VALUES ('ET','1','2016-01-07',
+           '1','','','2','5');
+INSERT INTO Inventario
+   VALUES ('GD','1','2015-01-07',
+           '1','','','2','4');
+INSERT INTO Inventario
+   VALUES ('TS','1','2015-01-07',
+           '1','','','2','3');
+INSERT INTO Inventario
+   VALUES ('FG','1','2019-01-07',
+           '1','','','2','3');
+INSERT INTO Inventario
+   VALUES ('FG','2','2019-01-07',
+           '1','','','2','3');
+INSERT INTO Inventario
+   VALUES ('I1','1','2020-01-07',
+           '1','','','2','4');
+INSERT INTO Inventario
+   VALUES ('I2','1','2020-01-07',
+           '1','','','2','3');
+INSERT INTO Inventario
+   VALUES ('I3','1','2020-01-07',
+           '1','','','2','4');
+INSERT INTO Inventario
+   VALUES ('I4','1','2020-01-07',
+           '1','','','2','2');
+INSERT INTO Inventario
+   VALUES ('I4','1','2020-01-07',
+           '1','','','2','2');
+INSERT INTO Inventario
+   VALUES ('P1','1','2018-05-07',
+           '1','','','2','3');
+INSERT INTO Inventario
+   VALUES ('P1','2','2018-05-07',
+           '1','','','2','3');
+INSERT INTO Inventario
+   VALUES ('P2','1','2018-05-07',
+           '1','','','2','2');
+INSERT INTO Inventario
+   VALUES ('P2','2','2018-05-07',
+           '1','','','2','2');
+INSERT INTO Inventario
+   VALUES ('TT','1','2015-05-07',
+           '1','','','2','3');
+INSERT INTO Inventario
+   VALUES ('BN','1','2011-05-07',
+           '1','','','2','5');
+INSERT INTO Inventario
+   VALUES ('BN','2','2011-05-07',
+           '1','','','2','5');
+INSERT INTO Inventario
+   VALUES ('GH','1','2015-05-07',
+           '1','','','2','3');
+INSERT INTO Inventario
+   VALUES ('LA','1','2018-05-07',
+           '1','','','2','4');
+INSERT INTO Inventario
+   VALUES ('BH','1','2017-05-07',
+           '1','','','2','2');
+INSERT INTO Inventario
+   VALUES ('VL','1','2017-05-07',
+           '1','','','2','3');
+INSERT INTO Inventario
+   VALUES ('VL','1','2017-05-07',
+           '1','','','2','3');
+
+		   SELECT * FROM INVENTARIO
